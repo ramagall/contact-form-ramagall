@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Contact form</title>
@@ -15,38 +19,77 @@
   </style>
 </head>
 <body>
-
-  Contact Us
-
-  First Name
-  This field is required
-
-  Last Name
-  This field is required
-
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
-
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <form>
+    <h1>
+      Contact Us
+    </h1>
+    <div class="nameFields">
+      <div class="fnameField">
+        <label for="fname" class="formLabel">
+          First Name <span class="required">  * </span>
+        </label>
+        <br>
+        <input id="fname" class="fname" type="text"/>
+        <p>This field is required</p>
+      </div>
+      <div class="lnameField">
+        <label for="lname" class="formLabel">
+          Last Name <span class="required">  * </span>
+        </label>
+        <br>
+        <input id="lname" class="lname" type="text"/>
+        <p>This field is required</p>
+      </div>
+    </div>
+    <div class="emailField">
+      <label for="email" class="formLabel">
+        Email Address <span class="required">  * </span>
+      </label>
+      <br>
+      <input id="email" class="email" type="text"/>
+      <p>Please enter a valid email address</p>
+    </div>
+    <div class="queryField">
+      <label for="query" class="formLabel">
+        Query Type <span class="requrired">  * </span>
+      </label>
+      <br>
+      <div class="generalEnquiry">
+        <input id="query" class="query" type="radio"/>
+        <label>General Enquiry</label>
+      </div>
+      <div class="supportRequest">
+        <input id="query" class="query" type="radio"/>
+        <label>Support Request</label>
+      </div>
+      <p>Please select a query type</p>
+    </div>
+    <div class="messageField">
+      <label for="message" class="formLabel">
+        Message <span class="required">  * </span>
+      </label>
+      <br>
+      <textarea id="message" class="message" rows="6"></textarea>
+      <p>This field is required</p>
+    </div>
+    <div class="consentField">
+      <input id="consent" class="consent" type="checkbox">
+      <label for="consent" class="formLabel">
+        I consent to being contacted by the team <span class="required">  * </span>
+      </label>
+      <p>To submit this form, please consent to being contacted</p>
+    </div>
+    <button class="submit">Submit</button>
+    <!--
+    Message Sent!
+    Thanks for completing the form. We'll be in touch soon!
+    -->
+  </form>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+      Coded by <a href="#">Rodolfo Antonio Magallanes Barreras</a>.
+  </footer>
   </div>
 </body>
 </html>
