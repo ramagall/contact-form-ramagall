@@ -26,11 +26,11 @@
     <div class="nameFields">
       <div class="fnameField">
         <label for="fname" class="formLabel">
-          First Name <span class="required">  * </span>
+          First Name <span class="required">   * </span>
         </label>
         <br>
         <input id="fname" class="fname" type="text"/>
-        <p>This field is required</p>
+        <p class="fnameWarning">This field is requried</p>
       </div>
       <div class="lnameField">
         <label for="lname" class="formLabel">
@@ -38,46 +38,55 @@
         </label>
         <br>
         <input id="lname" class="lname" type="text"/>
-        <p>This field is required</p>
+        <p class="lnameWarning">This field is requried</p>
       </div>
     </div>
     <div class="emailField">
       <label for="email" class="formLabel">
-        Email Address <span class="required">  * </span>
-      </label>
+        Email Address <span class="required">   * </span>
       <br>
       <input id="email" class="email" type="text"/>
-      <p>Please enter a valid email address</p>
+      <p class="emailWarning">Please enter a valid email address</p>
     </div>
+    
     <div class="queryField">
-      <label for="query" class="formLabel">
-        Query Type <span class="requrired">  * </span>
-      </label>
       <br>
-      <div class="generalEnquiry">
-        <input id="query" class="query" type="radio"/>
-        <label>General Enquiry</label>
+      <div>
+        <div class="queryFieldLabel">
+          <label for="query" class="formLabel">
+            Query Type <span class="requrired">   * </span>
+          </label>
+        </div>
+        <div class="generalEnquiry">
+          <input id="query" class="query" type="radio" name="queryGroup"/>
+          <label class="radioLabel">General Enquiry</label>
+        </div>
+        <p class="queryWarningDesk">This field is requried</p>
       </div>
-      <div class="supportRequest">
-        <input id="query" class="query" type="radio"/>
-        <label>Support Request</label>
+      <div>
+        <br class="queryHelp">
+        <div class="supportRequest">
+          <input id="query" class="query" type="radio" name="queryGroup"/>
+          <label class="radioLabel">Support Request</label>
+        </div>
+        <p class="queryWarningMobile">This field is requried</p>
       </div>
-      <p>Please select a query type</p>
     </div>
     <div class="messageField">
       <label for="message" class="formLabel">
-        Message <span class="required">  * </span>
+        Message <span class="required">   * </span>
       </label>
-      <br>
       <textarea id="message" class="message" rows="6"></textarea>
-      <p>This field is required</p>
+      <p class="messageWarning">This field is requried</p>
     </div>
     <div class="consentField">
-      <input id="consent" class="consent" type="checkbox">
-      <label for="consent" class="formLabel">
-        I consent to being contacted by the team <span class="required">  * </span>
+      <div class="consentHelper">
+        <input id="consent" class="consent" type="checkbox" class="consentBox">
+        <label for="consent" class="formLabel">
+          I consent to being contacted by the team <span class="required">   * </span>
       </label>
-      <p>To submit this form, please consent to being contacted</p>
+      </div>
+      <p class="consentWarning">To submit this form, please consent to being contacted </p>
     </div>
     <button class="submit">Submit</button>
     <!--
