@@ -11,14 +11,16 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Contact form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <div class="successAlert" id="successAlert">
+    <div class="successHeader">
+      <img src="./assets/images/icon-success-check.svg"><h4>Message Sent!</h4>
+    </div>
+    <p class="successMessage" id="successMessage">Thanks for completing the form. We'll be in touch soon!</p>
+
+    </p>
+  </div>
   <form>
     <h1>
       Contact Us
@@ -30,7 +32,7 @@
         </label>
         <br>
         <input id="fname" class="fname" type="text"/>
-        <p class="fnameWarning">This field is requried</p>
+        <p class="fnameWarning" id="fnameWarning">This field is requried</p>
       </div>
       <div class="lnameField">
         <label for="lname" class="formLabel">
@@ -38,7 +40,7 @@
         </label>
         <br>
         <input id="lname" class="lname" type="text"/>
-        <p class="lnameWarning">This field is requried</p>
+        <p class="lnameWarning" id="lnameWarning">This field is requried</p>
       </div>
     </div>
     <div class="emailField">
@@ -46,7 +48,7 @@
         Email Address <span class="required">   * </span>
       <br>
       <input id="email" class="email" type="text"/>
-      <p class="emailWarning">Please enter a valid email address</p>
+      <p class="emailWarning" id="emailWarning">Please enter a valid email address</p>
     </div>
     
     <div class="queryField">
@@ -57,19 +59,19 @@
             Query Type <span class="requrired">   * </span>
           </label>
         </div>
-        <div class="generalEnquiry">
-          <input id="query" class="query" type="radio" name="queryGroup"/>
+        <div class="generalEnquiry" id="generalEnquiry">
+          <input id="queryGeneral" class="query" type="radio" name="queryGroup"/>
           <label class="radioLabel">General Enquiry</label>
         </div>
-        <p class="queryWarningDesk">This field is requried</p>
+        <p class="queryWarningDesk" id="queryWarningDesk">This field is requried</p>
       </div>
       <div>
         <br class="queryHelp">
-        <div class="supportRequest">
-          <input id="query" class="query" type="radio" name="queryGroup"/>
+        <div class="supportRequest" id="supportRequest">
+          <input id="querySupp" class="query" type="radio" name="queryGroup"/>
           <label class="radioLabel">Support Request</label>
         </div>
-        <p class="queryWarningMobile">This field is requried</p>
+        <p class="queryWarningMobile" id="queryWarningMobile">This field is requried</p>
       </div>
     </div>
     <div class="messageField">
@@ -77,28 +79,20 @@
         Message <span class="required">   * </span>
       </label>
       <textarea id="message" class="message" rows="6"></textarea>
-      <p class="messageWarning">This field is requried</p>
+      <p class="messageWarning" id="messageWarning">This field is requried</p>
     </div>
     <div class="consentField">
       <div class="consentHelper">
-        <input id="consent" class="consent" type="checkbox" class="consentBox">
+        <input id="consent" class="consent" type="checkbox">
         <label for="consent" class="formLabel">
           I consent to being contacted by the team <span class="required">   * </span>
       </label>
       </div>
-      <p class="consentWarning">To submit this form, please consent to being contacted </p>
+      <p class="consentWarning" id = 'consentWarning'>To submit this form, please consent to being contacted </p>
     </div>
-    <button class="submit">Submit</button>
-    <!--
-    Message Sent!
-    Thanks for completing the form. We'll be in touch soon!
-    -->
+    <button class="submit" id="submitButton">Submit</button>
   </form>
-  <footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-      Coded by <a href="#">Rodolfo Antonio Magallanes Barreras</a>.
-  </footer>
   </div>
+  <script src="index.js"></script>
 </body>
 </html>
