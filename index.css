@@ -56,6 +56,10 @@
     margin-top: .5rem;
   }
 
+  span {
+    color: var(--greenMedium);
+  }
+
   input[type=radio] {
     accent-color: var(--greenMedium);
   }
