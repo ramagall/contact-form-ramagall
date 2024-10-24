@@ -1,27 +1,58 @@
 const submitButton = document.getElementById("submitButton");
-const paragraphs = document.querySelectorAll('p');
-const textFields = document.querySelectorAll('input');
 const successAlert = document.getElementById('successAlert');
-const radioButtons = document.getElementsByName('query');
-const queryButton = document.getElementById('queryGeneral');
-const suppButton = document.getElementById('querySupp');
+const queryButton = document.getElementById('queryGeneral')
+const suppButton = document.getElementById('querySupp')
 const generalEnquiry = document.getElementById('generalEnquiry');
 const supportRequest = document.getElementById('supportRequest');
 
 
+function emptyField(fieldName) {
+    const field = document.getElementById(fieldName);
+    field.value = "";
+}
 
-submitButton.onclick = () => {
+function emptyCheckField(fieldName) {
+    const field = document.getElementById(fieldName);
+    field.checked = false;
+}
+
+function emptyRadio(groupName) {
+    const radioButtons = document.getElementsByName(groupName);
+    for(i = 0; i < radioButtons.length; i++){
+        if(radioButtons[i].checked){
+            radioButtons[i].checked = false;
+        }
+    }
+    generalEnquiry.style.backgroundColor = 'white';
+    supportRequest.style.backgroundColor = 'white';
+}
+
+function clearAllFields(){
+    emptyField('fname');
+    emptyField('lname');
+    emptyField('email');
+    emptyField('message');
+    emptyCheckField('consent');
+    emptyRadio('queryGroup');
+}
+
+submitButton.onclick = (event, ) => {
     event.preventDefault();
     valid = validForm();
     if(valid === true){
         successAlert.style.display = 'flex';
+        clearAllFields();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
     }
     else{
         successAlert.style.display = 'none';
     }
 }
 
-queryButton.addEventListener("change", () => {
+queryButton.addEventListener("change", (event, ) => {
     event.preventDefault();
     if (queryButton.checked) {
       generalEnquiry.style.backgroundColor = 'var(--greenLighter)';
@@ -29,9 +60,8 @@ queryButton.addEventListener("change", () => {
     }
   });
 
-suppButton.addEventListener("change", () => {
+suppButton.addEventListener("change", (event, ) => {
     event.preventDefault();
-    console.log("here");
     if (suppButton.checked) {
         generalEnquiry.style.backgroundColor = 'white';
         supportRequest.style.backgroundColor = 'var(--greenLighter)';
