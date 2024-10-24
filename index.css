@@ -172,6 +172,7 @@
   .generalEnquiry {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     margin-top: .6rem;
     padding-left: 1rem;
     width: 15rem;
@@ -186,6 +187,7 @@
   .supportRequest {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     margin-top: .6rem;
     padding-left: 1rem;
     width: 15rem;
