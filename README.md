@@ -37,8 +37,8 @@ The following is my version:
 
 ### Links
 
-- Solution URL: [will add when posted solution URL here](https://your-solution-url.com)
-- Live Site URL: [live site URL here](https://ramagall.github.io/contact-form-ramagall/)
+- Solution URL: [Solution URL here](https://www.frontendmentor.io/solutions/contact-form-challenge-ramagall-myJ4WKQNHr)
+- Live Site URL: [Live site URL here](https://ramagall.github.io/contact-form-ramagall/)
 
 ## My process
 
