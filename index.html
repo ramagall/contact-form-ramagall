@@ -22,75 +22,79 @@
     </p>
   </div>
   <form>
-    <h1>
-      Contact Us
-    </h1>
-    <div class="nameFields">
-      <div class="fnameField">
-        <label for="fname" class="formLabel">
-          First Name <span class="required">   * </span>
-        </label>
-        <br>
-        <input id="fname" class="fname" type="text" autocomplete="given-name"/>
-        <p class="fnameWarning" id="fnameWarning">This field is requried</p>
-      </div>
-      <div class="lnameField">
-        <label for="lname" class="formLabel">
-          Last Name <span class="required">  * </span>
-        </label>
-        <br>
-        <input id="lname" class="lname" type="text" autocomplete="family-name"/>
-        <p class="lnameWarning" id="lnameWarning">This field is requried</p>
-      </div>
-    </div>
-    <div class="emailField">
-      <label for="email" class="formLabel">
-        Email Address <span class="required">   * </span>
-      <br>
-      <input id="email" class="email" type="text" autocomplete="on"/>
-      <p class="emailWarning" id="emailWarning">Please enter a valid email address</p>
-    </div>
-    
-    <div class="queryField">
-      <br>
-      <div>
-        <div class="queryFieldLabel">
-          <label for="queryGeneral" class="formLabel">
-            Query Type <span class="requrired">   * </span>
+    <header>
+      <h1>
+        Contact Us
+      </h1>
+    </header>
+    <main>
+      <div class="nameFields">
+        <div class="fnameField">
+          <label for="fname" class="formLabel">
+            First Name <span class="required">   * </span>
           </label>
+          <br>
+          <input id="fname" class="fname" type="text" autocomplete="given-name"/>
+          <p class="fnameWarning" id="fnameWarning">This field is requried</p>
         </div>
-        <div class="generalEnquiry" id="generalEnquiry">
-          <input id="queryGeneral" class="query" type="radio" name="queryGroup"/>
-          <label class="radioLabel" for="queryGeneral">General Enquiry</label>
+        <div class="lnameField">
+          <label for="lname" class="formLabel">
+            Last Name <span class="required">  * </span>
+          </label>
+          <br>
+          <input id="lname" class="lname" type="text" autocomplete="family-name"/>
+          <p class="lnameWarning" id="lnameWarning">This field is requried</p>
         </div>
-        <p class="queryWarningDesk" id="queryWarningDesk">This field is requried</p>
       </div>
-      <div>
-        <br class="queryHelp">
-        <div class="supportRequest" id="supportRequest">
-          <input id="querySupp" class="query" type="radio" name="queryGroup"/>
-          <label class="radioLabel" for="querySupp">Support Request</label>
+      <div class="emailField">
+        <label for="email" class="formLabel">
+          Email Address <span class="required">   * </span>
+        <br>
+        <input id="email" class="email" type="text" autocomplete="on"/>
+        <p class="emailWarning" id="emailWarning">Please enter a valid email address</p>
+      </div>
+      
+      <div class="queryField">
+        <br>
+        <div>
+          <div class="queryFieldLabel">
+            <label for="queryGeneral" class="formLabel">
+              Query Type <span class="requrired">   * </span>
+            </label>
+          </div>
+          <div class="generalEnquiry" id="generalEnquiry">
+            <input id="queryGeneral" class="query" type="radio" name="queryGroup"/>
+            <label class="radioLabel" for="queryGeneral">General Enquiry</label>
+          </div>
+          <p class="queryWarningDesk" id="queryWarningDesk">This field is requried</p>
         </div>
-        <p class="queryWarningMobile" id="queryWarningMobile">This field is requried</p>
+        <div>
+          <br class="queryHelp">
+          <div class="supportRequest" id="supportRequest">
+            <input id="querySupp" class="query" type="radio" name="queryGroup"/>
+            <label class="radioLabel" for="querySupp">Support Request</label>
+          </div>
+          <p class="queryWarningMobile" id="queryWarningMobile">This field is requried</p>
+        </div>
       </div>
-    </div>
-    <div class="messageField">
-      <label for="message" class="formLabel">
-        Message <span class="required">   * </span>
-      </label>
-      <textarea id="message" class="message" rows="6"></textarea>
-      <p class="messageWarning" id="messageWarning">This field is requried</p>
-    </div>
-    <div class="consentField">
-      <div class="consentHelper">
-        <input id="consent" class="consent" type="checkbox">
-        <label for="consent" class="formLabel">
-          I consent to being contacted by the team <span class="required">   * </span>
-      </label>
+      <div class="messageField">
+        <label for="message" class="formLabel">
+          Message <span class="required">   * </span>
+        </label>
+        <textarea id="message" class="message" rows="6"></textarea>
+        <p class="messageWarning" id="messageWarning">This field is requried</p>
       </div>
-      <p class="consentWarning" id = 'consentWarning'>To submit this form, please consent to being contacted </p>
-    </div>
-    <button class="submit" id="submitButton">Submit</button>
+      <div class="consentField">
+        <div class="consentHelper">
+          <input id="consent" class="consent" type="checkbox">
+          <label for="consent" class="formLabel">
+            I consent to being contacted by the team <span class="required">   * </span>
+        </label>
+        </div>
+        <p class="consentWarning" id = 'consentWarning'>To submit this form, please consent to being contacted </p>
+      </div>
+      <button class="submit" id="submitButton">Submit</button>
+    </main>
   </form>
   </div>
   <script src="index.js"></script>
